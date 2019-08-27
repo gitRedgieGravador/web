@@ -97,8 +97,16 @@
             <form id="form" name="registration">
                 <label for="idNum">Student ID</label>
                 <input type="number" id="idNum" name="idNum" class="form-control" disabled><br>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" class="form-control"><br>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="firstname">Firstname</label>
+                        <input type="text" id="firstname" name="firstname" class="form-control"><br>
+                    </div>
+                    <div class="col">
+                        <label for="lastname">Lastname</label>
+                        <input type="text" id="lastname" name="lastname" class="form-control"><br>
+                    </div>
+                </div>
                 <label for="cy">Course and year</label>
                 <input type="text" id="cy" name="cy" class="form-control"><br>
                 <label for="email">Email address</label>
@@ -107,6 +115,7 @@
                 <input type="text" id="address" name="address" class="form-control"><br>
             </form>
             <button id="save" class="btn btn-primary btn-lg btn-block" value="submit">Save</button>
+            <button type="button" class="btn btn-danger btn-lg btn-block" id="cancel">Cancel</button>
         </div>
     </div>
     <div id="classlistForm">
