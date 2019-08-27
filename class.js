@@ -22,12 +22,12 @@ $(document).ready(function () {
                 if (editing) {
                     let editId = $("#idNum").val();
 
-                    $("#name" + editId).text($("#name").val());
-                    $("#cy" + editId).text($("#cy").val());
-                    list[editId][0] = $("#name").val();
-                    list[editId][1] = $("#cy").val();
-                    list[editId][2] = $("#email").val();
-                    list[editId][3] = $('#address').val();
+                    $("#name" + editId).text(pname);
+                    $("#cy" + editId).text(pcy);
+                    list[editId][0] = pname;
+                    list[editId][1] = pcy;
+                    list[editId][2] = pemail;
+                    list[editId][3] = padd;
 
                     $("#divFrom").css("height", "0%");
                     $("input").val("");
