@@ -9,14 +9,26 @@ $(document).ready(function () {
 
     $("#idNum").val(id);
 
+    $(function(){
+        $("#cancel").click(function () {
+            $("#divFrom").css("height", "0%");
+            $("input").val("");
+            $("#idNum").val(id);
+            editing = false;
+
+        });
+    });
+
     $(function () {
         $("#save").click(function () {
             let pid = id;
-            let pname = $("#name").val();
+            let pfname = $("#firstname").val();
+            let plname = $("#lastname").val();
+            let pname = pfname + " " + plname;
             let pcy = $("#cy").val();
             let padd = $('#address').val();
             let pemail = $("#email").val();
-            if (pname == "" || pcy == "" || pemail == "" || padd == "") {
+            if (pfname == "" || plname == "" ||pcy == "" || pemail == "" || padd == "") {
                 alert("All fields are required!");
             } else {
                 if (editing) {
@@ -62,7 +74,7 @@ $(document).ready(function () {
                     $("#" + pid).append(th, name, CY, action);
                     action.append(edit, remove);
 
-                    let arr = [pname, pcy, pemail, padd];
+                    let arr = [pfname,plname, pcy, pemail, padd];
                     list.push(arr);
 
                     id += 1;
@@ -85,10 +97,11 @@ $(document).ready(function () {
             $("#btnEdit" + num).on('click', function () {
                 editing = true;
                 $("#idNum").val(num);
-                $("#name").val(list[num][0]);
-                $("#cy").val(list[num][1]);
-                $("#email").val(list[num][2]);
-                $('#address').val(list[num][3]);
+                $("#firstname").val(list[num][0]);
+                $("#lastname").val(list[num][1]);
+                $("#cy").val(list[num][2]);
+                $("#email").val(list[num][3]);
+                $('#address').val(list[num][4]);
 
                 $("#divFrom").css("height", "100%");
             });
