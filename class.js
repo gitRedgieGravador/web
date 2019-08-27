@@ -17,7 +17,7 @@ $(document).ready(function () {
             let padd = $('#address').val();
             let pemail = $("#email").val();
             if (pname == "" || pcy == "" || pemail == "" || padd == "") {
-                alert("All fields is required!");
+                alert("All fields are required!");
             } else {
                 if (editing) {
                     let editId = $("#idNum").val();
