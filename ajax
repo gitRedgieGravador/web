@@ -1,0 +1,11 @@
+
+var link = "https://restcountries.eu/rest/v2/name/" + "phi";
+$.ajax({
+    url: link,
+    error: function (error) {
+        alert(error.status)
+    },
+    success: function (data) {
+        console.log(data);
+    }
+});  
