@@ -75,10 +75,11 @@ function longest_Collatz(num) {
 }
 //console.log(longest_Collatz(20));
 
-function Lattice_paths(num) {
-    var routes = 1;
-    for (var i = 1; i <= num; i++)
-        routes = routes * (num + i) / i; //(Sample Size X Population) / (Sample Size + Population – 1)
-    return routes;
-}
-console.log(Lattice_paths(8));
+//this is correct but hard to explaine ... look for another ref online
+// function Lattice_paths(num) {
+//     var routes = 1;
+//     for (var i = 1; i <= num; i++)
+//         routes = routes * (num + i) / i; //(Sample Size X Population) / (Sample Size + Population – 1)
+//     return routes;
+// }
+// console.log(Lattice_paths(8));
